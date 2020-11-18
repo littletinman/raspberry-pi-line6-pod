@@ -15,7 +15,8 @@ Based on:https://www.youtube.com/watch?v=yCSW-LtYlJc&t=178s&ab_channel=GeneralWh
     make bcm2711_defconfig
     
     // This will configure the driver
-    sed -ri "/CONFIG_SND_USB_POD/ { s/# (\w+).*/\1=m/; i CONFIG_SND_USB_LINE6=m }" .config
+    sed -ri "/CONFIG_SND_USB_POD/ { s/# (\w+).*/\1=m/; i CONFIG_SND_USB_LINE6=m
+    }" .config
     
     // Build Kernel (takes a long time)
     make -j4 zImage modules dtbs
